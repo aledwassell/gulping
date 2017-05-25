@@ -3,4 +3,5 @@ body #main h1 {
 
 body #box {
   height: auto;
-  width: auto; }
+  width: auto;
+  color: pink; }

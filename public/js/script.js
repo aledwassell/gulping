@@ -9,6 +9,8 @@ $(document).ready(function(){
     $(this).css('backgroundColor', 'white')
   })
   $('#main').css('color', 'green');
+
+  $('#box').css('color', 'pink');
 })
 
 const url = 'http://api.open-notify.org/iss-now.json';

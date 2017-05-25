@@ -8,4 +8,6 @@ $(document).ready(function(){
     $(this).css('backgroundColor', 'white')
   })
   $('#main').css('color', 'green');
+
+  $('#box').css('color', 'pink');
 })
