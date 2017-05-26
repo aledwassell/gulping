@@ -9,5 +9,5 @@ $(document).ready(function(){
   })
   $('#main').css('color', 'green');
 
-  $('#box').css('color', 'pink');
+  $('#box').css('color', 'blue');
 })

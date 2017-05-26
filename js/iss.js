@@ -10,7 +10,8 @@ fetch(url)
       }
 
       res.json().then(function(data){
-        console.log(data)
+        console.log(data.iss_position);
+        console.log('latitude: ' + data.iss_position.latitude + ' longitude: ' + data.iss_position.longitude)
       })
     }
   )

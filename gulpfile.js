@@ -19,14 +19,12 @@ gulp.task('css', () => {
   return gulp.src(sassSources)
     .pipe(sass())
     .pipe(gulp.dest('public/css'))
-    .pipe(connect.reload())
 })
 
 gulp.task('html', () => {
   return gulp.src(pugSources)
     .pipe(pug())
     .pipe(gulp.dest('public'))
-    .pipe(connect.reload())
 })
 
 gulp.task('js', function(){
@@ -34,7 +32,6 @@ gulp.task('js', function(){
     .pipe(concat('script.js'))
     .pipe(browserify())
     .pipe(gulp.dest('public/js'))
-    .pipe(connect.reload())
 })
 
 gulp.task('watch', () => {
@@ -43,11 +40,4 @@ gulp.task('watch', () => {
   gulp.watch(jsSource, ['js']);
 })
 
-gulp.task('connect', () => {
-  connect.server({
-    root: 'public',
-    livereload: true
-  });
-})
-
-gulp.task('default', ['html', 'css', 'connect', 'js']);
+gulp.task('default', ['html', 'css', 'js', 'watch']);

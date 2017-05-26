@@ -10,7 +10,7 @@ $(document).ready(function(){
   })
   $('#main').css('color', 'green');
 
-  $('#box').css('color', 'pink');
+  $('#box').css('color', 'blue');
 })
 
 const url = 'http://api.open-notify.org/iss-now.json';
@@ -25,7 +25,8 @@ fetch(url)
       }
 
       res.json().then(function(data){
-        console.log(data)
+        console.log(data.iss_position);
+        console.log('latitude: ' + data.iss_position.latitude + ' longitude: ' + data.iss_position.longitude)
       })
     }
   )
